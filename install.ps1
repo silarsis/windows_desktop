@@ -1,2 +1,2 @@
 Import-Module Boxstarter.Chocolatey
-Install-BoxstarterPackage -PackageName boxstarter.txt
+Install-BoxstarterPackage boxstarter.txt
