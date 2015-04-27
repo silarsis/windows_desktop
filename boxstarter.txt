@@ -1,0 +1,21 @@
+Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+
+#Enable-MicrosoftUpdate
+#Install-WindowsUpdate
+
+cinst google-chrome-x64 -y
+cinst atom -y
+cinst lastpass -y
+cinst tweetz-desktop -y
+cinst git -y -params '"/GitAndUnixToolsOnPath"'
+(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
+Install-Module posh-git
+(new-object New.WebClient).DownloadString("http://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi") | iex
+cinst steam -y
+# Install Visual Studio 2015 CTP
+# Install Resharper
+# Install Slack (login to slack via web, find binary, download)
+cinst virtualbox -y
+cinst vagrant -y
+cinst packer -y
+Update-ExecutionPolicy RemoteSigned
