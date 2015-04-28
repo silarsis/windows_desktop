@@ -1,4 +1,5 @@
 install:
   - ps: cinst boxstarter -y
+  - ps: $env:PSModulePath = $env:APPDATA + "\Boxstarter;" + $env:PSModulePath
 build_script:
   - ps: powershell.exe -ExecutionPolicy bypass -NoExit -Command "&'./install.ps1'"
