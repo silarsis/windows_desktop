@@ -1,4 +1,4 @@
 install:
   - ps: cinst boxstarter -y
 build_script:
-  - ps: install.ps1
+  - ps: ./install.ps1
