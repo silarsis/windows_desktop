@@ -1,4 +1,4 @@
 install:
   - ps: cinst boxstarter -y
 build_script:
-  - ps: powershell.exe -ExecutionPolicy bypass -NoExit -Command "&'./install.ps1'"
+  - ps: powershell.exe -ExecutionPolicy bypass -NonInteractive -Command "&'./install.ps1'"
