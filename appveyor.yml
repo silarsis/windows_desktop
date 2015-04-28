@@ -1,4 +1,6 @@
 install:
   - ps: cinst boxstarter -y
 build_script:
-  - ps: ./install.ps1
+  - ps: |
+  Import-Module Boxstarter.Chocolatey
+  Install-BoxstarterPackage boxstarter.txt
