@@ -9,8 +9,10 @@ cinst lastpass -y
 cinst tweetz-desktop -y
 cinst git -y -params '"/GitAndUnixToolsOnPath"'
 (new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
+Invoke-WebRequest -uri http://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
+msiexec.exe /qn /i AWSToolsAndSDKForNet.msi
+del AWSToolsAndSDKForNet.msi
 Install-Module posh-git
-(new-object New.WebClient).DownloadString("http://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi") | iex
 cinst steam -y
 # Install Visual Studio 2015 CTP
 # Install Resharper
@@ -18,4 +20,6 @@ cinst steam -y
 cinst virtualbox -y
 cinst vagrant -y
 cinst packer -y
+cinst PackerCommunityPlugins -pre -y
+cinst silverlight -y
 Update-ExecutionPolicy RemoteSigned
