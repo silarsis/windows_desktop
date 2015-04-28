@@ -20,4 +20,5 @@ cinst steam -y
 cinst virtualbox -y
 cinst vagrant -y
 cinst packer -y
+cinst silverlight -y
 Update-ExecutionPolicy RemoteSigned
