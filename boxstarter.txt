@@ -10,7 +10,7 @@ cinst tweetz-desktop -y
 cinst git -y -params '"/GitAndUnixToolsOnPath"'
 (new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
 Install-Module posh-git
-(new-object New.WebClient).DownloadString("http://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi") | iex
+cinst awstools.powershell -y
 cinst steam -y
 # Install Visual Studio 2015 CTP
 # Install Resharper
