@@ -1,6 +1,4 @@
 install:
   - ps: cinst boxstarter -y
 build_script:
-  - ps: |
-  Import-Module Boxstarter.Chocolatey
-  Install-BoxstarterPackage boxstarter.txt
+  - ps: powershell.exe -ExecutionPolicy bypass -NoExit -Command "&'./install.ps1'"
