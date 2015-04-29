@@ -3,23 +3,25 @@ Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleB
 #Enable-MicrosoftUpdate
 #Install-WindowsUpdate
 
-cinst google-chrome-x64 -y
-cinst atom -y
-cinst lastpass -y
-cinst tweetz-desktop -y
-cinst git -y -params '"/GitAndUnixToolsOnPath"'
-(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
+# Desktop apps
+cinst google-chrome-x64 atom lastpass tweetz-desktop steam silverlight -y
+
+# AWS Powershell Tools
 Invoke-WebRequest -uri http://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
 msiexec.exe /qn /i AWSToolsAndSDKForNet.msi
 del AWSToolsAndSDKForNet.msi
+
+# Powershell/command line/background dev tools
+cinst docker docker-machine virtualbox vagrant packer PackerCommunityPlugins -pre -y
+
+# Git and Powershell git helpers
+cinst git -y -params '"/GitAndUnixToolsOnPath"'
+(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
 Install-Module posh-git
-cinst steam -y
+
+# Manual Tasks:
 # Install Visual Studio 2015 CTP
 # Install Resharper
 # Install Slack (login to slack via web, find binary, download)
-cinst virtualbox -y
-cinst vagrant -y
-cinst packer -y
-cinst PackerCommunityPlugins -pre -y
-cinst silverlight -y
+
 Update-ExecutionPolicy RemoteSigned
