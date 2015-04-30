@@ -20,8 +20,10 @@ cinst git -y -params '"/GitAndUnixToolsOnPath"'
 Install-Module posh-git
 
 # Manual Tasks:
-# Install Visual Studio 2015 CTP
 # Install Resharper
 # Install Slack (login to slack via web, find binary, download)
+
+# Dev environment
+choco install visualstudiocommunity2013 nuget.commandline microsoft-build-tools -y
 
 Update-ExecutionPolicy RemoteSigned
