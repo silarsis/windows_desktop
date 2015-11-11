@@ -25,4 +25,7 @@ Install-Module posh-git
 # Dev environment
 choco install visualstudio2015community -y
 
+# Atom packages
+apm install git-plus fonts language-diff language-docker language-powershell jshint
+
 Update-ExecutionPolicy RemoteSigned
