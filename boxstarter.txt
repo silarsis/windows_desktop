@@ -4,7 +4,7 @@ Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleB
 #Install-WindowsUpdate
 
 # Desktop apps
-cinst google-chrome-x64 atom lastpass tweetz-desktop steam silverlight -y
+cinst google-chrome-x64 atom lastpass steam slack -y
 
 # AWS Powershell Tools
 Invoke-WebRequest -uri http://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
@@ -12,7 +12,7 @@ msiexec.exe /qn /i AWSToolsAndSDKForNet.msi
 del AWSToolsAndSDKForNet.msi
 
 # Powershell/command line/background dev tools
-cinst docker docker-machine virtualbox vagrant packer PackerCommunityPlugins -pre -y
+#cinst docker docker-machine virtualbox vagrant -pre -y
 
 # Git and Powershell git helpers
 cinst git -y -params '"/GitAndUnixToolsOnPath"'
@@ -21,7 +21,6 @@ Install-Module posh-git
 
 # Manual Tasks:
 # Install Resharper
-# Install Slack (login to slack via web, find binary, download)
 
 # Dev environment
 choco install visualstudiocommunity2013 nuget.commandline microsoft-build-tools -y
