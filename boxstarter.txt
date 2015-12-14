@@ -4,7 +4,7 @@ Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleB
 #Install-WindowsUpdate
 
 # Desktop apps
-cinst google-chrome-x64 atom lastpass steam slack -y
+cinst google-chrome-x64 atom lastpass steam slack visualstudiocode -y
 
 # AWS Powershell Tools
 Invoke-WebRequest -uri http://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
@@ -20,10 +20,7 @@ cinst git -y -params '"/GitAndUnixToolsOnPath"'
 Install-Module posh-git
 
 # Manual Tasks:
-# Install Resharper
-
-# Dev environment
-choco install visualstudio2015community -y
+# Install Resharper?
 
 # Atom packages
 apm install git-plus fonts language-diff language-docker language-powershell jshint
