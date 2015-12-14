@@ -16,8 +16,7 @@ del AWSToolsAndSDKForNet.msi
 
 # Git and Powershell git helpers
 cinst git -y -params '"/GitAndUnixToolsOnPath"'
-(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
-Install-Module posh-git
+cinst poshgit mysql.workbench -y
 
 # Manual Tasks:
 # Install Resharper?
