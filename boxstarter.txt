@@ -17,6 +17,9 @@ del AWSToolsAndSDKForNet.msi
 # Git and Powershell git helpers
 cinst git -y -params '"/GitAndUnixToolsOnPath"'
 cinst poshgit mysql.workbench -y
+git config --global push.default simple
+git config --global user.name "Kevin Littlejohn"
+git config --global user.email "kevin@littlejohn.id.au"
 
 # Manual Tasks:
 # Install Resharper?
