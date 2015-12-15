@@ -21,6 +21,14 @@ git config --global push.default simple
 git config --global user.name "Kevin Littlejohn"
 git config --global user.email "kevin@littlejohn.id.au"
 
+# Manual Tasks:
+# Install Resharper?
+
+# Atom packages
+apm install git-plus fonts language-diff language-docker language-powershell jshint
+
+Update-ExecutionPolicy RemoteSigned
+
 # Hack font
 $outfile = "C:\Hack.zip"
 $destination = "C:\temp_fonts"
@@ -32,12 +40,4 @@ $zip.items() | ForEach-Object { (New-Object -ComObject Shell.Application).Namesp
 Get-ChildItem $destination | ForEach-Object { $fonts.CopyHere($_.fullname) }
 Remove-Item -Recurse $destination
 New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont' -Name 42 -Value 'Hack' -PropertyType 'String' -Force
-# Needs a reboot here
-
-# Manual Tasks:
-# Install Resharper?
-
-# Atom packages
-apm install git-plus fonts language-diff language-docker language-powershell jshint
-
-Update-ExecutionPolicy RemoteSigned
+Invoke-Reboot
