@@ -21,6 +21,19 @@ git config --global push.default simple
 git config --global user.name "Kevin Littlejohn"
 git config --global user.email "kevin@littlejohn.id.au"
 
+# Hack font
+$outfile = "C:\Hack.zip"
+$destination = "C:\temp_fonts"
+Invoke-WebRequest -uri https://github.com/chrissimpkins/Hack/releases/download/v2.018/Hack-v2_018-ttf.zip -OutFile $outfile
+$fonts = (New-Object -ComObject Shell.Application).Namespace(0x14)
+New-Item -Path $destination -Type Directory
+$zip = (New-Object -ComObject Shell.Application).NameSpace($outfile)
+$zip.items() | ForEach-Object { (New-Object -ComObject Shell.Application).Namespace($destination).CopyHere($_) }
+Get-ChildItem $destination | ForEach-Object { $fonts.CopyHere($_.fullname) }
+Remove-Item -Recurse $destination
+New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont' -Name 42 -Value 'Hack' -PropertyType 'String' -Force
+# Needs a reboot here
+
 # Manual Tasks:
 # Install Resharper?
 
