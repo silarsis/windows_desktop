@@ -40,4 +40,5 @@ $zip.items() | ForEach-Object { (New-Object -ComObject Shell.Application).Namesp
 Get-ChildItem $destination | ForEach-Object { $fonts.CopyHere($_.fullname) }
 Remove-Item -Recurse $destination
 New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont' -Name 42 -Value 'Hack' -PropertyType 'String' -Force
+New-Item -Path C:\Users\kevin\Documents\WindowsPowerShell\Microsoft.PowerShellISE_profile.ps1 -Type file -Force -Value "`$psISE.Options.FontName = `"Hack`""
 Invoke-Reboot
