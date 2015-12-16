@@ -39,6 +39,10 @@ $zip = (New-Object -ComObject Shell.Application).NameSpace($outfile)
 $zip.items() | ForEach-Object { (New-Object -ComObject Shell.Application).Namespace($destination).CopyHere($_) }
 Get-ChildItem $destination | ForEach-Object { $fonts.CopyHere($_.fullname) }
 Remove-Item -Recurse $destination
-New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont' -Name 42 -Value 'Hack' -PropertyType 'String' -Force
+New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont' -Name 000 -Value 'Hack' -PropertyType 'String' -Force
+# Hack - Powershell ISE
 New-Item -Path C:\Users\kevin\Documents\WindowsPowerShell\Microsoft.PowerShellISE_profile.ps1 -Type file -Force -Value "`$psISE.Options.FontName = `"Hack`""
+# Hack - VisualStudio Code
+New-Item -Path C:\Users\kevin\AppData\Roaming\Code\User\settings.json -Type file -Force -Value "{`"editor.fontFamily`":`"Hack`"}"
+
 Invoke-Reboot
