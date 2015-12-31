@@ -47,4 +47,6 @@ New-Item -Path C:\Users\kevin\AppData\Roaming\Code\User\settings.json -Type file
 
 cinst chocolatey -y
 
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+
 Invoke-Reboot
