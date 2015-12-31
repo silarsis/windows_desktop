@@ -45,4 +45,6 @@ New-Item -Path C:\Users\kevin\Documents\WindowsPowerShell\Microsoft.PowerShellIS
 # Hack - VisualStudio Code
 New-Item -Path C:\Users\kevin\AppData\Roaming\Code\User\settings.json -Type file -Force -Value "{`"editor.fontFamily`":`"Hack`"}"
 
+cinst chocolatey -y
+
 Invoke-Reboot
