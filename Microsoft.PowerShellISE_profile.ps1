@@ -29,3 +29,13 @@ cd C:\Users\Kevin\Source\Repos
 
 function ssh { Start-Process ssh $args }
 function vim { Start-Process vim $args }
+function say {
+  Param([string]$text)
+  Add-Type -AssemblyName System.speech
+  $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
+  $speak.SelectVoice('Microsoft Hazel Desktop')
+  $speak.Speak("$text")
+}
+
+$player = New-Object System.Media.SoundPlayer "C:\Users\Kevin\Documents\byc.wav"
+$player.play()
