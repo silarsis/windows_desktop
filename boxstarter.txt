@@ -4,7 +4,7 @@ Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleB
 #Install-WindowsUpdate
 
 # Desktop apps
-cinst google-chrome-x64 atom lastpass steam slack visualstudiocode -y
+cinst google-chrome-x64 lastpass steam slack visualstudiocode -y
 
 # AWS Powershell Tools
 Invoke-WebRequest -uri http://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
@@ -16,16 +16,13 @@ del AWSToolsAndSDKForNet.msi
 
 # Git and Powershell git helpers
 cinst git -y -params '"/GitAndUnixToolsOnPath"'
-cinst poshgit mysql.workbench -y
+cinst poshgit -y
 git config --global push.default simple
 git config --global user.name "Kevin Littlejohn"
 git config --global user.email "kevin@littlejohn.id.au"
 
 # Manual Tasks:
 # Install Resharper?
-
-# Atom packages
-apm install git-plus fonts language-diff language-docker language-powershell jshint
 
 Update-ExecutionPolicy RemoteSigned
 
