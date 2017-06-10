@@ -4,7 +4,7 @@ Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleB
 #Install-WindowsUpdate
 
 # Desktop apps
-cinst steam slack visualstudiocode gitkraken hackfont chocolatey itunes -y
+cinst steam slack visualstudiocode gitkraken hackfont chocolatey itunes icloud -y
 
 # AWS Powershell Tools
 Invoke-WebRequest -uri https://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
