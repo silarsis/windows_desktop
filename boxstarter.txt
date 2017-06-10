@@ -4,15 +4,12 @@ Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleB
 #Install-WindowsUpdate
 
 # Desktop apps
-cinst google-chrome-x64 lastpass steam slack visualstudiocode -y
+cinst steam slack visualstudiocode gitkraken hackfont chocolatey -y
 
 # AWS Powershell Tools
-Invoke-WebRequest -uri http://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
+Invoke-WebRequest -uri https://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
 msiexec.exe /qn /i AWSToolsAndSDKForNet.msi
 del AWSToolsAndSDKForNet.msi
-
-# Powershell/command line/background dev tools
-#cinst docker docker-machine virtualbox vagrant -pre -y
 
 # Git and Powershell git helpers
 cinst git -y -params '"/GitAndUnixToolsOnPath"'
@@ -21,29 +18,10 @@ git config --global push.default simple
 git config --global user.name "Kevin Littlejohn"
 git config --global user.email "kevin@littlejohn.id.au"
 
-# Manual Tasks:
-# Install Resharper?
-
 Update-ExecutionPolicy RemoteSigned
 
-# Hack font
-$outfile = "C:\Hack.zip"
-$destination = "C:\temp_fonts"
-Invoke-WebRequest -uri https://github.com/chrissimpkins/Hack/releases/download/v2.018/Hack-v2_018-ttf.zip -OutFile $outfile
-$fonts = (New-Object -ComObject Shell.Application).Namespace(0x14)
-New-Item -Path $destination -Type Directory
-$zip = (New-Object -ComObject Shell.Application).NameSpace($outfile)
-$zip.items() | ForEach-Object { (New-Object -ComObject Shell.Application).Namespace($destination).CopyHere($_) }
-Get-ChildItem $destination | ForEach-Object { $fonts.CopyHere($_.fullname) }
-Remove-Item -Recurse $destination
-New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont' -Name 000 -Value 'Hack' -PropertyType 'String' -Force
-# Hack - Powershell ISE
-New-Item -Path C:\Users\kevin\Documents\WindowsPowerShell\Microsoft.PowerShellISE_profile.ps1 -Type file -Force -Value "`$psISE.Options.FontName = `"Hack`""
-# Hack - VisualStudio Code
-New-Item -Path C:\Users\kevin\AppData\Roaming\Code\User\settings.json -Type file -Force -Value "{`"editor.fontFamily`":`"Hack`"}"
-
-cinst chocolatey -y
-
+# Docker
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+cinst docker-for-windows -pre -y
 
 Invoke-Reboot
