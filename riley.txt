@@ -1,0 +1,19 @@
+# Riley's computer
+
+Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+
+# Allow running PowerShell scripts
+Update-ExecutionPolicy Unrestricted
+
+# Allow unattended reboots
+$Boxstarter.RebootOk=$true
+$Boxstarter.NoPassword=$false
+$Boxstarter.AutoLogin=$true
+
+# Update Windows and reboot if necessary
+Install-WindowsUpdate -AcceptEula
+Enable-MicrosoftUpdate
+if (Test-PendingReboot) { Invoke-Reboot }
+
+# Desktop apps
+cinst steam visualstudiocode chocolatey minecraft -y
