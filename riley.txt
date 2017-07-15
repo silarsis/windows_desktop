@@ -16,4 +16,4 @@ Enable-MicrosoftUpdate
 if (Test-PendingReboot) { Invoke-Reboot }
 
 # Desktop apps
-cinst steam visualstudiocode chocolatey minecraft -y
+cinst steam visualstudiocode chocolatey minecraft spotify -y
