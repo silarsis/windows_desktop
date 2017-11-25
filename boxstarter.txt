@@ -28,3 +28,5 @@ Invoke-Reboot
 cinst docker-for-windows -pre -y
 lxrun /install /y
 Invoke-Reboot
+
+# Download http://www.traynier.com/files/SteamMover_v0_1.zip and unzip onto desktop
