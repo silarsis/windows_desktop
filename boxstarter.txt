@@ -20,11 +20,8 @@ git config --global user.email "kevin@littlejohn.id.au"
 
 Update-ExecutionPolicy RemoteSigned
 
-# Docker and Linux - lots of reboots here
+# Docker and Linux
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-Invoke-Reboot
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -All
-Invoke-Reboot
 cinst docker-for-windows -pre -y
-lxrun /install /y
 Invoke-Reboot
