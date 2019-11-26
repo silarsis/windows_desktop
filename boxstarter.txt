@@ -4,7 +4,7 @@ Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleB
 #Install-WindowsUpdate
 
 # Desktop apps
-cinst steam slack dotnetcore-sdk visualstudiocode hackfont chocolatey itunes lastpass googlechrome python citrix-receiver microsoft-teams minecraft -y
+cinst steam slack dotnetcore-sdk visualstudiocode hackfont chocolatey itunes lastpass googlechrome python citrix-receiver microsoft-teams minecraft microsoft-windows-terminal -y
 
 # AWS Powershell Tools
 Invoke-WebRequest -uri https://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
