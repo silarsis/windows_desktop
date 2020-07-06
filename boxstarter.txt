@@ -1,10 +1,10 @@
 Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 
-#Enable-MicrosoftUpdate
-#Install-WindowsUpdate
+Enable-MicrosoftUpdate
+Install-WindowsUpdate
 
 # Desktop apps
-cinst steam slack dotnetcore-sdk hackfont chocolatey itunes lastpass googlechrome python minecraft microsoft-windows-terminal -y
+cinst steam slack dotnetcore-sdk hackfont chocolatey lastpass googlechrome python minecraft microsoft-windows-terminal -y
 cinst visualstudiocode-insiders --pre -y
 
 # AWS Powershell Tools
