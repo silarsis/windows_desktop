@@ -1,1 +1,10 @@
-powershelltools.vsix
+eamodio.gitlens
+GitHub.vscode-pull-request-github
+kiteco.kite
+ms-azuretools.vscode-docker
+ms-python.python
+ms-vscode-remote.remote-wsl
+ms-vscode.powershell
+stubailo.ignore-gitignore
+amazonwebservices.aws-toolkit-vscode
+golang.Go
