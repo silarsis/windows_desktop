@@ -14,6 +14,7 @@ ctf0.macros
 devadvice.serverlessconsole
 donjayamanne.python-extension-pack
 eamodio.gitlens
+foam.foam-vscode
 formulahendry.code-runner
 GitHub.vscode-pull-request-github
 Gruntfuggly.todo-tree
