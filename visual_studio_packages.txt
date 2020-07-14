@@ -14,6 +14,7 @@ ctf0.macros
 devadvice.serverlessconsole
 donjayamanne.python-extension-pack
 eamodio.gitlens
+esbenp.prettier-vscode
 foam.foam-vscode
 formulahendry.code-runner
 GitHub.vscode-pull-request-github
@@ -29,6 +30,7 @@ jakearl.search-editor-apply-changes
 jasonlhy.hungry-delete
 jkjustjoshing.vscode-text-pastry
 johnpapa.vscode-peacock
+kortina.vscode-markdown-notes
 lacroixdavid1.vscode-format-context-menu
 lostintangent.vsls-whiteboard
 magicstack.MagicPython
@@ -48,6 +50,7 @@ ms-vscode-remote.vscode-remote-extensionpack
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
 nhoizey.gremlins
+philipbe.theme-gray-matter
 pnp.polacode
 rafamel.subtle-brackets
 RedVanWorkshop.explorer-exclude-vscode-extension
@@ -56,8 +59,10 @@ slevesque.vscode-multiclip
 stkb.rewrap
 streetsidesoftware.code-spell-checker
 svipas.control-snippets
+tchayen.markdown-links
 tomoki1207.pdf
 VisualStudioExptTeam.vscodeintellicode
 vsls-contrib.codetour
 vsls-contrib.gistfs
 wholroyd.jinja
+yzhang.markdown-all-in-one
