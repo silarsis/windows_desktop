@@ -4,7 +4,7 @@ Enable-MicrosoftUpdate
 Install-WindowsUpdate
 
 # Desktop apps
-cinst steam slack dotnetcore-sdk hackfont chocolatey lastpass googlechrome python minecraft microsoft-windows-terminal termius barrier -y
+cinst steam slack dotnetcore-sdk hackfont chocolatey lastpass googlechrome python minecraft microsoft-windows-terminal termius barrier zoom -y
 cinst visualstudiocode-insiders --pre -y
 
 # AWS Powershell Tools
