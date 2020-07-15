@@ -4,7 +4,7 @@ Enable-MicrosoftUpdate
 Install-WindowsUpdate
 
 # Desktop apps
-cinst steam slack dotnetcore-sdk hackfont chocolatey lastpass googlechrome python minecraft microsoft-windows-terminal -y
+cinst steam slack dotnetcore-sdk hackfont chocolatey lastpass googlechrome python minecraft microsoft-windows-terminal termius barrier -y
 cinst visualstudiocode-insiders --pre -y
 foreach ($line in (Invoke-WebRequest -Uri https://raw.githubusercontent.com/silarsis/windows_desktop/master/visual_studio_packages.txt).content -split "`n") { code-insiders --install-extension $line }
 
