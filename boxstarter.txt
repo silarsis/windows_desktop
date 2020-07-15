@@ -6,7 +6,6 @@ Install-WindowsUpdate
 # Desktop apps
 cinst steam slack dotnetcore-sdk hackfont chocolatey lastpass googlechrome python minecraft microsoft-windows-terminal termius barrier -y
 cinst visualstudiocode-insiders --pre -y
-foreach ($line in (Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/silarsis/windows_desktop/master/visual_studio_packages.txt).content -split "`n") { code-insiders --install-extension $line }
 
 # AWS Powershell Tools
 Invoke-WebRequest -UseBasicParsing -Uri https://sdk-for-net.amazonwebservices.com/latest/AWSToolsAndSDKForNet.msi -OutFile .\AWSToolsAndSDKForNet.msi
@@ -21,6 +20,9 @@ git config --global user.name "Kevin Littlejohn"
 git config --global user.email "kevin@littlejohn.id.au"
 
 Update-ExecutionPolicy RemoteSigned
+
+# Install Visual Studio Code extensions (after git because some need git)
+foreach ($line in (Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/silarsis/windows_desktop/master/visual_studio_packages.txt).content -split "`n") { code-insiders --install-extension $line }
 
 # Docker and Linux
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
