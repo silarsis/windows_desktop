@@ -21,6 +21,11 @@ git config --global user.email "kevin@littlejohn.id.au"
 
 Update-ExecutionPolicy RemoteSigned
 
+# Enable OpenSSH
+Get-WindowsCapability -Online | ? Name -like 'OpenSSH*' | foreach { Add-WindowsCapability -Online -Name $_.Name }
+Start-Service sshd
+Set-Service -Name sshd -StartupType 'Automatic'
+
 # Install Visual Studio Code extensions (after git because some need git)
 foreach ($line in (Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/silarsis/windows_desktop/master/visual_studio_packages.txt).content -split "`n") { code-insiders --install-extension $line }
 
