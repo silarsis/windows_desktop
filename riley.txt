@@ -10,6 +10,11 @@ $Boxstarter.RebootOk=$true
 $Boxstarter.NoPassword=$false
 $Boxstarter.AutoLogin=$true
 
+# Enable OpenSSH
+Get-WindowsCapability -Online | ? Name -like 'OpenSSH*' | foreach { Add-WindowsCapability -Online -Name $_.Name }
+Start-Service sshd
+Set-Service -Name sshd -StartupType 'Automatic'
+
 # Update Windows and reboot if necessary
 Install-WindowsUpdate -AcceptEula
 Enable-MicrosoftUpdate
