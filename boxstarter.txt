@@ -4,7 +4,7 @@ Enable-MicrosoftUpdate
 Install-WindowsUpdate
 
 # Desktop apps
-cinst steam slack dotnetcore-sdk hackfont chocolatey lastpass googlechrome python minecraft microsoft-windows-terminal termius barrier zoom powershell-preview dontsleep -y
+cinst steam slack dotnetcore-sdk hackfont chocolatey lastpass python microsoft-windows-terminal termius barrier zoom powershell-preview dontsleep -y
 cinst visualstudiocode-insiders --pre -y
 
 # AWS Powershell Tools
@@ -27,11 +27,12 @@ Start-Service sshd
 Set-Service -Name sshd -StartupType 'Automatic'
 
 # Install Visual Studio Code extensions (after git because some need git)
-foreach ($line in (Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/silarsis/windows_desktop/master/visual_studio_packages.txt).content -split "`n") { code-insiders --install-extension $line }
+# This is now dealt with by vs code sync settings
+# foreach ($line in (Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/silarsis/windows_desktop/master/visual_studio_packages.txt).content -split "`n") { code-insiders --install-extension $line }
 
 # scoop and nushell - experimental
-iwr -useb get.scoop.sh | iex
-scoop install nu
+# iwr -useb get.scoop.sh | iex
+# scoop install nu
 
 # Docker and Linux
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
