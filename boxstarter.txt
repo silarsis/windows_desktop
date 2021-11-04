@@ -6,7 +6,6 @@ Install-WindowsUpdate
 # Desktop apps
 winget install --accept-package-agreements --source msstore slack
 winget install --accept-package-agreements --source msstore --id valve.steam steam
-winget install --accept-package-agreements --source winget --id python.python.3 "python 3"
 winget install --accept-package-agreements --source msstore "ZOOM Cloud Meetings"
 winget install --accept-package-agreements --source winget --id DebaucheeOpenSourceGroup.Barrier barrier
 winget install --accept-package-agreements --source msstore "Powershell Preview"
@@ -16,6 +15,7 @@ winget install --accept-package-agreements --source winget --id SourceFoundry.Ha
 # winget install --accept-package-agreements --source winget --id git.git
 winget install --accept-package-agreements --source winget --id Docker.DockerDesktop
 winget install --accept-package-agreements --source msstore Ubuntu
+winget install --accept-package-agreements --source winget --id python.python.3 "python 3"
 winget install --accept-package-agreements --source winget --id GoLang.Go
 Install-Module -Confirm -Name AWS.Tools.Common
 
