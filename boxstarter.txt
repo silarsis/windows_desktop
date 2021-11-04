@@ -16,6 +16,7 @@ winget install --accept-package-agreements --source winget --id SourceFoundry.Ha
 # winget install --accept-package-agreements --source winget --id git.git
 winget install --accept-package-agreements --source winget --id Docker.DockerDesktop
 winget install --accept-package-agreements --source msstore Ubuntu
+winget install --accept-package-agreements --source winget --id GoLang.Go
 Install-Module -Confirm -Name AWS.Tools.Common
 
 # winget <how to install?> steam slack
