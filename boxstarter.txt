@@ -10,10 +10,12 @@ winget install --accept-package-agreements --source winget --id python.python.3 
 winget install --accept-package-agreements --source msstore "ZOOM Cloud Meetings"
 winget install --accept-package-agreements --source winget --id DebaucheeOpenSourceGroup.Barrier barrier
 winget install --accept-package-agreements --source msstore "Powershell Preview"
+winget install --accept-package-agreements --source winget --id Microsoft.dotnet
 winget install --accept-package-agreements --source winget --id Microsoft.VisualStudioCode.Insiders
 winget install --accept-package-agreements --source winget --id SourceFoundry.HackFonts
 # winget install --accept-package-agreements --source winget --id git.git
 winget install --accept-package-agreements --source winget --id Docker.DockerDesktop
+winget install --accept-package-agreements --source msstore Ubuntu
 Install-Module -Confirm -Name AWS.Tools.Common
 
 # winget <how to install?> steam slack
@@ -42,7 +44,7 @@ Set-Service -Name sshd -StartupType 'Automatic'
 # scoop install nu
 
 # Docker and Linux
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -All
+# Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+# Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -All
 # cinst docker-for-windows -pre -y
 Invoke-Reboot
