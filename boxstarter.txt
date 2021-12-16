@@ -4,6 +4,7 @@ Enable-MicrosoftUpdate
 Install-WindowsUpdate
 
 # Desktop apps
+winget install --accept-package-agreements --source winget Microsoft.PowerToys
 winget install --accept-package-agreements --source msstore slack
 winget install --accept-package-agreements --source msstore --id valve.steam steam
 winget install --accept-package-agreements --source msstore "ZOOM Cloud Meetings"
@@ -21,7 +22,6 @@ winget install --accept-package-agreements --source winget --id python.python.3 
 winget install --accept-package-agreements --source winget --id GoLang.Go
 Install-Module -Confirm -Name AWS.Tools.Common
 
-# winget <how to install?> steam slack
 # cinst dotnetcore-sdk chocolatey lastpass microsoft-windows-terminal termius dontsleep -y
 
 # Git and Powershell git helpers - not sure this is working currently, need to check
