@@ -3,12 +3,13 @@ Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleB
 Enable-MicrosoftUpdate
 Install-WindowsUpdate
 
+# Need to install winget/app installer - right now, that means https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab
+
 # Desktop apps
 winget install --accept-package-agreements --source winget Microsoft.PowerToys
 winget install --accept-package-agreements --source msstore slack
 winget install --accept-package-agreements --source msstore --id valve.steam steam
 winget install --accept-package-agreements --source msstore "ZOOM Cloud Meetings"
-winget install --accept-package-agreements --source winget --id Plex.PlexMediaPlayer
 winget install --accept-package-agreements --source winget --id Obsidian.Obsidian
 winget install --accept-package-agreements --source winget --id DebaucheeOpenSourceGroup.Barrier barrier
 winget install --accept-package-agreements --source msstore "Powershell Preview"
